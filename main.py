@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-
+#unzip file attached 
 data = pd.read_csv('C:/Users/dhruv/Desktop/digit_recogNN/train.csv') # change 
 data = np.array(data)
 m, n = data.shape
