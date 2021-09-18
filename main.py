@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-data = pd.read_csv('C:/Users/dhruv/Desktop/digit_recogNN/train.csv')
+data = pd.read_csv('C:/Users/dhruv/Desktop/digit_recogNN/train.csv') # change 
 data = np.array(data)
 m, n = data.shape
 np.random.shuffle(data) # shuffle before splitting into dev and training sets
@@ -81,7 +81,9 @@ def gradient_descent(X, Y, alpha, iterations):
             predictions = get_predictions(A2)
             print(get_accuracy(predictions, Y))
     return W1, b1, W2, b2
+
 W1, b1, W2, b2 = gradient_descent(X_train, Y_train, 0.10, 500)
+
 def make_predictions(X, W1, b1, W2, b2):
     _, _, _, A2 = forward_prop(W1, b1, W2, b2, X)
     predictions = get_predictions(A2)
